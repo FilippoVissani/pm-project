@@ -1,3 +1,10 @@
+## 1.0.0 (2024-01-24)
+
+
+### Documentation
+
+* define structure ([77dafe5](https://github.com/FilippoVissani/pm-project/commit/77dafe53520ad9f0a73b144624b0a2ffbfa85314))
+
 ## [0.2.0](https://github.com/FilippoVissani/latex-template/compare/0.1.2+2023-03-14-16-45...0.2.0) (2023-04-04)
 
 
