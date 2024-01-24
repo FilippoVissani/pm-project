@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/FilippoVissani/pm-project/compare/1.0.0...1.0.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* fix title ([9d84a3b](https://github.com/FilippoVissani/pm-project/commit/9d84a3b13157860002da4fc8cd2ae28c6ad21009))
+
 ## 1.0.0 (2024-01-24)
 
 
