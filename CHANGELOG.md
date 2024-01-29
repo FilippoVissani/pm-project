@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/FilippoVissani/pm-project/compare/1.0.1...1.0.2) (2024-01-29)
+
+
+### Documentation
+
+* add part of structure ([09a1871](https://github.com/FilippoVissani/pm-project/commit/09a18714555132ed6c7312f37fe85b739c1a4283))
+
 ## [1.0.1](https://github.com/FilippoVissani/pm-project/compare/1.0.0...1.0.1) (2024-01-24)
 
 
