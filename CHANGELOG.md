@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/FilippoVissani/pm-project/compare/1.0.3...1.0.4) (2024-01-31)
+
+
+### Documentation
+
+* add introduction ([8721457](https://github.com/FilippoVissani/pm-project/commit/872145772d6cef9aaf1af86ea393c9a66ce75a53))
+
 ## [1.0.3](https://github.com/FilippoVissani/pm-project/compare/1.0.2...1.0.3) (2024-01-31)
 
 
