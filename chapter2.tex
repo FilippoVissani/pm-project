@@ -4,34 +4,126 @@
 
 \subsection{User Stories}
 
+Nel corso del primo incontro di scoping, il team di progetto CityTwin ha identificato e definito le user stories chiave. Questa fase è stata fondamentale per ottenere una comprensione dettagliata delle esigenze degli utilizzatori finali e ha fornito una guida iniziale per lo sviluppo del sistema di digital twin.
+
+\subsubsection{User Story 1: Visualizzazione dello Stato del Sistema tramite GUI}
+
+\textbf{Come} utente interessato al monitoraggio del sistema CityTwin \\
+\textbf{Voglio} accedere a una GUI (Control Panel) \\
+\textbf{In modo da} visualizzare chiaramente lo stato attuale dei nodi Mainstay e Resource del sistema.
+
+\textbf{Criteri di Accettazione:}
+\begin{itemize}
+  \item La GUI deve fornire un'interfaccia intuitiva e facile da comprendere.
+  \item Lo stato di ciascun nodo (Mainstay e Resource) deve essere chiaramente indicato.
+  \item L'utente deve essere in grado di distinguere facilmente i nodi online da quelli offline.
+\end{itemize}
+
+\subsubsection{User Story 2: Visualizzazione delle Risorse nella Città tramite GUI}
+
+\textbf{Come} utente interessato alla localizzazione delle risorse nel sistema CityTwin \\
+\textbf{Voglio} utilizzare la GUI \\
+\textbf{In modo da} visualizzare la posizione delle risorse nella città, con indicazione del nome e dello stato (online/offline).
+
+\textbf{Criteri di Accettazione:}
+\begin{itemize}
+  \item La mappa nella GUI deve mostrare chiaramente la posizione delle risorse.
+  \item Ogni risorsa deve essere contrassegnata con il suo nome e stato di funzionamento.
+  \item L'aggiornamento della posizione delle risorse deve essere in tempo reale.
+\end{itemize}
+
+\subsubsection{User Story 3: Monitoraggio Storico tramite GUI}
+
+\textbf{Come} utente interessato all'analisi storica dei dati del sistema CityTwin \\
+\textbf{Voglio} utilizzare la GUI \\
+\textbf{In modo da} visualizzare un grafico che rappresenti il numero di nodi Mainstay e Resource online nel tempo, basato sui dati rilevati dal servizio di persistenza.
+
+\textbf{Criteri di Accettazione:}
+\begin{itemize}
+  \item La GUI deve presentare un grafico temporale del numero di nodi online nel corso del tempo.
+  \item L'asse delle ascisse deve rappresentare il tempo, mentre l'asse delle ordinate deve rappresentare il numero di nodi online.
+  \item L'utente deve poter selezionare intervalli temporali specifici per l'analisi.
+\end{itemize}
+
 \subsection{Ubiquitous Language}
 
-\subsection{Requirement Breakdown Structure}
+Durante lo stesso incontro, è stato stabilito un linguaggio comune (Ubiquitous Language) basato sulle specifiche del dominio del progetto CityTwin. Questo linguaggio è stato adottato da tutti i membri del team per garantire una comunicazione chiara e univoca.
 
 \section{Secondo Project Scoping Meeting}
 
 \subsection{User Stories}
 
+In una sessione successiva, il team ha affinato ulteriormente le user stories. Questo passo è stato intrapreso per tenere conto di eventuali nuove informazioni emerse durante lo sviluppo iniziale del progetto, mirando a ottenere una comprensione più approfondita delle esigenze degli utenti.
+
+\subsubsection{User Story 4: Monitoraggio dello Stato del fiume tramite GUI}
+
+\textbf{Come} utente interessato al monitoraggio dello stato dei fiumi \\
+\textbf{Voglio} utilizzare la GUI \\
+\textbf{In modo da} visualizzare chiaramente lo stato attuale del River Monitor (Safe, Warned, Evacuating).
+
+\textbf{Criteri di Accettazione:}
+\begin{itemize}
+  \item La GUI deve presentare lo stato corrente del River Monitor in modo evidente.
+  \item Lo stato deve essere visivamente distintivo per una rapida interpretazione.
+\end{itemize}
+
+\subsubsection{User Story 5: Gestione dello Stato del River tramite GUI}
+
+\textbf{Come} utente autorizzato alla gestione degli stati del River Monitor \\
+\textbf{Voglio} utilizzare la GUI \\
+\textbf{In modo da}  poter passare manualmente dallo stato di "Warned" a "Evacuating" e da "Evacuating" a "Safe".
+
+\textbf{Criteri di Accettazione:}
+\begin{itemize}
+  \item La GUI deve fornire pulsanti chiaramente identificabili per passare tra gli stati.
+  \item L'utente autorizzato deve poter effettuare la transizione di stato senza difficoltà.
+\end{itemize}
+
+\subsubsection{User Story 6: Aggiunta/Rimozione Nodi Resource in Tempo Reale}
+
+\textbf{Come} amministratore del sistema CityTwin \\
+\textbf{Voglio} avere la possibilità di aggiungere o rimuovere nuovi nodi Resource \\
+\textbf{In modo da} adattare il sistema alle mutevoli esigenze delle smart city.
+
+\textbf{Criteri di Accettazione:}
+\begin{itemize}
+  \item L'amministratore deve poter aggiungere nuovi nodi Resource senza interrompere il funzionamento del sistema.
+  \item La rimozione di nodi Resource non deve causare problemi di integrità del sistema.
+  \item Le modifiche devono essere effettive in tempo reale.
+\end{itemize}
+
 \subsection{Ubiquitous Language}
 
+Durante lo stesso incontro, il linguaggio comune è stato rivisto e aggiornato per riflettere meglio le dinamiche emergenti durante il processo di sviluppo. Questo assicura una comunicazione continua e chiara tra i membri del team.
+
 \subsection{Requirement Breakdown Structure}
+
+Successivamente, il team ha proceduto con la scomposizione dei requisiti in una struttura gerarchica. Questa attività, completata anch'essa nel primo incontro di scoping, ha permesso di ottenere una visione dettagliata delle funzionalità e delle caratteristiche del sistema.
 
 \section{Terzo Project Scoping Meeting}
 
-\subsection{User Stories}
-
-\subsection{Ubiquitous Language}
-
 \subsection{Requirement Breakdown Structure}
+
+L'ultima fase di dettaglio della struttura dei requisiti, anch'essa completata nel terzo incontro, si è concentrata su eventuali modifiche o aggiunte necessarie per riflettere completamente le esigenze del progetto CityTwin.
 
 \section{Project Overview Statement}
 
 \subsection{Problemi}
 
+In un'analisi approfondita, sono stati identificati e documentati i problemi chiave che il team affronterà durante lo sviluppo del sistema CityTwin.
+
 \subsection{Goal del Progetto}
+
+Il team ha delineato il fine ultimo del progetto CityTwin, stabilendo il risultato desiderato e l'obiettivo a lungo termine.
 
 \subsection{Obiettivi del Progetto}
 
+Sono stati elencati gli obiettivi specifici del progetto, fornendo una guida chiara sulle tappe da raggiungere per raggiungere il goal finale.
+
 \subsection{Criteri di Successo}
 
+Nella stessa fase, sono stati definiti i criteri che indicheranno il successo del progetto, offrendo un punto di riferimento oggettivo per valutare il raggiungimento degli obiettivi.
+
 \subsection{Assunzioni, Rischi e Ostacoli}
+
+Infine, sono state documentate le assunzioni fatte, i rischi identificati e gli ostacoli potenziali che potrebbero influire sul corso del progetto, preparando il team a gestire queste variabili in corso d'opera.
