@@ -49,6 +49,17 @@ Nel corso del primo incontro di scoping, il team di progetto CityTwin ha identif
 
 Durante lo stesso incontro, è stato stabilito un linguaggio comune (Ubiquitous Language) basato sulle specifiche del dominio del progetto CityTwin. Questo linguaggio è stato adottato da tutti i membri del team per garantire una comunicazione chiara e univoca.
 
+\begin{itemize}
+    \item \textbf{GUI (Control Panel):} Interfaccia grafica utente che fornisce una visione d'insieme dello stato del sistema CityTwin, consentendo agli utenti di monitorare i nodi Mainstay e Resource.
+  
+    \item \textbf{Nodo Mainstay:} Nodo fondamentale all'interno del sistema CityTwin che si occupa di coordinare le informazioni tra i nodi Resource, rilevare malfunzionamenti e salvare dati in modo persistente.
+  
+    \item \textbf{Nodo Resource:} Nodo che rappresenta sensori, attuatori o entità complesse all'interno del sistema CityTwin. La composizione di più nodi Resource forma un Digital Twin.
+  
+    \item \textbf{Digital Twin:} Rappresentazione digitale di entità fisiche all'interno della città, composta da uno o più nodi Resource.
+  
+  \end{itemize}
+
 \section{Secondo Project Scoping Meeting}
 
 \subsection{User Stories}
@@ -67,7 +78,7 @@ In una sessione successiva, il team ha affinato ulteriormente le user stories. Q
   \item Lo stato deve essere visivamente distintivo per una rapida interpretazione.
 \end{itemize}
 
-\subsubsection{User Story 5: Gestione dello Stato del River tramite GUI}
+\subsubsection{User Story 5: Gestione dello Stato del River Monitor tramite GUI}
 
 \textbf{Come} utente autorizzato alla gestione degli stati del River Monitor \\
 \textbf{Voglio} utilizzare la GUI \\
@@ -95,6 +106,21 @@ In una sessione successiva, il team ha affinato ulteriormente le user stories. Q
 \subsection{Ubiquitous Language}
 
 Durante lo stesso incontro, il linguaggio comune è stato rivisto e aggiornato per riflettere meglio le dinamiche emergenti durante il processo di sviluppo. Questo assicura una comunicazione continua e chiara tra i membri del team.
+
+\begin{itemize}
+    \item \textbf{GUI (Control Panel):} Interfaccia grafica utente che fornisce una visione d'insieme dello stato del sistema CityTwin, consentendo agli utenti di monitorare i nodi Mainstay e Resource.
+  
+    \item \textbf{GUI (River Monitor):} Interfaccia grafica utente specifica per il monitoraggio dello stato del fiume, consentendo agli utenti di visualizzare informazioni cruciali come lo stato corrente e i livelli dell'acqua.
+  
+    \item \textbf{Nodo Mainstay:} Nodo fondamentale all'interno del sistema CityTwin che si occupa di coordinare le informazioni tra i nodi Resource, rilevare malfunzionamenti e salvare dati in modo persistente.
+  
+    \item \textbf{Nodo Resource:} Nodo che rappresenta sensori, attuatori o entità complesse all'interno del sistema CityTwin. La composizione di più nodi Resource forma un Digital Twin.
+  
+    \item \textbf{Digital Twin:} Rappresentazione digitale di entità fisiche all'interno della città, composta da uno o più nodi Resource.
+  
+    \item \textbf{River Monitor:} Parte del sistema CityTwin che si occupa del monitoraggio dello stato dei fiumi, incluso il livello dell'acqua e le transizioni tra gli stati Safe, Warned ed Evacuating.
+  
+  \end{itemize}
 
 \subsection{Requirement Breakdown Structure}
 
