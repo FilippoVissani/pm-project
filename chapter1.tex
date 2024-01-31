@@ -1,1 +1,18 @@
 \chapter{Introduzione}
+Il progetto CityTwin si propone di realizzare un sistema di digital twin nel contesto della smart city. In particolare, si vuole realizzare un sistema che sia in grado di catturare e rappresentare in formato digitale il comportamento delle varie entità presenti all'interno della città. Questo può portare ad una serie di benefici, alcuni dei quali vengono elencati di seguito:
+
+\begin{itemize}
+    \item Rilevazione di possibili problematiche con intervento tempestivo e automatizzato.
+    \item Riduzione del consumo energetico.
+    \item Rilevazione della qualità dell'aria e dell'acqua.
+    \item Analisi dell'inquinamento acustico.
+    \item Ottimizzazione della mobilità urbana.
+\end{itemize}
+
+Il sistema sarà composto da due tipologie di nodi: i nodi Mainstay, che rappresentano la struttura portante del sistema, e i nodi Resource, che rappresentano astrazioni di sensori, attuatori o entità più complesse. La composizione di più nodi Resource rappresenta un Digital Twin.
+
+I nodi Mainstay si occupano di scambiare informazioni con i nodi Resource, rilevare eventuali malfunzionamenti e salvare in modo persistente le informazioni rilevate dai nodi Resource. I nodi Mainstay devono essere sempre sincronizzati tra loro, in modo da poter garantire la coerenza dei dati.
+
+I nodi Resource, invece, si occupano di rilevare informazioni e comunicarle ai nodi Mainstay nel caso in cui vengano considerati come sensori. Nel caso in cui i nodi Resource rappresentino attuatori, invece, si occupano di ricevere informazioni dai nodi Mainstay e agire di conseguenza.
+
+L'utente potrà visualizzare lo stato attuale del sistema, lo storico dei dati ed eventuali statistiche, nonché interagire con il sistema tramite GUI, ad esempio per intervenire dopo la rilevazione di un incendio.
