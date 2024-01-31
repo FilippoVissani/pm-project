@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/FilippoVissani/pm-project/compare/1.0.2...1.0.3) (2024-01-31)
+
+
+### Documentation
+
+* define document structure ([bd315ff](https://github.com/FilippoVissani/pm-project/commit/bd315ff326850df75664fa42dd882ba8ce3c5bf5))
+
 ## [1.0.2](https://github.com/FilippoVissani/pm-project/compare/1.0.1...1.0.2) (2024-01-29)
 
 
