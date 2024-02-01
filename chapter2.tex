@@ -111,8 +111,6 @@ Nel corso del primo incontro di scoping, il team di progetto CityTwin ha identif
     \item L'utente deve poter selezionare intervalli temporali specifici per l'analisi.
 \end{itemize}
 
-\subsection{Conditions of Satisfaction}
-
 \subsection{Ubiquitous Language}
 
 Durante lo stesso incontro, è stato stabilito un linguaggio comune (Ubiquitous Language) basato sulle specifiche del dominio del progetto CityTwin. Questo linguaggio è stato adottato da tutti i membri del team per garantire una comunicazione chiara e univoca.
@@ -147,6 +145,8 @@ Durante lo stesso incontro, è stato stabilito un linguaggio comune (Ubiquitous 
           \begin{itemize}
               \item Revisione e aggiornamento del linguaggio comune.
           \end{itemize}
+
+    \item \textbf{Definizione delle Condition of Satisfaction (Tutti)}
 
     \item \textbf{Pianificazione delle Attività Future (Team)}
           \begin{itemize}
@@ -289,7 +289,7 @@ Sono stati definiti nel dettaglio i requisiti del sistema CityTwin, fornendo una
 \subsubsection{Requisiti di Business}
 I requisiti aziendali definiscono gli obiettivi di alto livello e la motivazione dietro lo sviluppo del software. Rispondono alla domanda "perché?" e definiscono l'importanza strategica del progetto:
 \begin{enumerate}
-    \item Obiettivi Strategici: Il progetto "CityTwin" mira a creare una piattaforma di simulazione e monitoraggio delle smart city per migliorare la gestione e l'ottimizzazione delle risorse urbane.
+    \item Obiettivi Strategici: Il progetto "CityTwin" mira a creare una piattaforma di monitoraggio delle smart city per migliorare la gestione e l'ottimizzazione delle risorse urbane.
     \item Aumento dell'Efficienza Urbana: Il sistema mira a migliorare l'efficienza operativa delle città intelligenti attraverso la rappresentazione digitale delle entità e delle interazioni all'interno della città.
 \end{enumerate}
 
@@ -313,7 +313,7 @@ Per rappresentare in modo efficace questi scenari e facilitare la comunicazione 
               \item Deve mostrare il valore di soglia dell'acqua sopra la quale il River Monitor passa allo stato di "Warned".
               \item Deve mettere a disposizione un pulsante per passare allo stato di "Evacuating" e un pulsante per tornare allo stato di "Safe".
           \end{enumerate}
-    \item L'utente deve avere la possibilità di aggiungere o rimuovere nuovi nodi Resource in tempo reale, senza che questo comprometta il funzionamento del sistema. Questa flessibilità consente di adattare il sistema alle mutevoli esigenze delle smart cities.
+    \item L'utente deve avere la possibilità di aggiungere o rimuovere nuovi nodi Resource in tempo reale, senza che questo comprometta il funzionamento del sistema. Questa flessibilità consente di adattare il sistema alle mutevoli esigenze delle smart city.
 \end{enumerate}
 \begin{figure}[H]
     \centering
@@ -416,24 +416,59 @@ Successivamente, il team ha proceduto con riportare i requisiti in un diagramma 
 
 \subsection{Project Overview Statement}
 
-\subsubsection{Problemi}
+\subsubsection{Problema/Opportunità}
 
-In un'analisi approfondita, sono stati identificati e documentati i problemi chiave che il team affronterà durante lo sviluppo del sistema CityTwin.
+Il progetto CityTwin si propone di affrontare la complessità della gestione urbana attraverso una piattaforma innovativa di monitoraggio delle smart city.
 
 \subsubsection{Goal del Progetto}
 
-Il team ha delineato il fine ultimo del progetto CityTwin, stabilendo il risultato desiderato e l'obiettivo a lungo termine.
+L'obiettivo principale di CityTwin è fornire una piattaforma completa e flessibile per il monitoraggio delle smart city, consentendo una gestione efficiente delle risorse urbane e migliorando l'esperienza complessiva degli abitanti.
 
 \subsubsection{Obiettivi del Progetto}
 
-Sono stati elencati gli obiettivi specifici del progetto, fornendo una guida chiara sulle tappe da raggiungere per raggiungere il goal finale.
+\begin{enumerate}
+  \item \textbf{Creazione della Piattaforma:} Sviluppare una piattaforma di monitoraggio, integrando moduli specifici per la gestione avanzata di sensori e attuatori.
+  
+  \item \textbf{Implementazione di Nodi Mainstay e Resource:} Realizzare nodi Mainstay per la comunicazione efficace e nodi Resource per rappresentare entità urbane, garantendo una gestione dinamica in tempo reale.
+  
+  \item \textbf{Integrazione di Moduli:} Integrare nuovi moduli, come sensori per la qualità dell'aria e monitoraggio dello stato del fiume, senza compromettere la stabilità del sistema.
+\end{enumerate}
 
 \subsubsection{Criteri di Successo}
 
-Nella stessa fase, sono stati definiti i criteri che indicheranno il successo del progetto, offrendo un punto di riferimento oggettivo per valutare il raggiungimento degli obiettivi.
+Il successo del progetto CityTwin sarà valutato in base ai seguenti criteri quantitativi:
+
+\begin{enumerate}
+  \item \textbf{Funzionalità Operative:} La piattaforma deve consentire la visualizzazione accurata dello stato della città digitale e il monitoraggio in tempo reale delle risorse.
+  
+  \item \textbf{Risposta Tempestiva:} Il tempo di risposta del sistema deve rispettare i limiti prestabiliti, garantendo un'esperienza utente efficiente.
+  
+  \item \textbf{Affidabilità e Ridondanza:} La ridondanza implementata deve mantenere la continuità operativa anche in caso di guasti hardware o malfunzionamenti.
+\end{enumerate}
 
 \subsubsection{Assunzioni, Rischi e Ostacoli}
 
-Infine, sono state documentate le assunzioni fatte, i rischi identificati e gli ostacoli potenziali che potrebbero influire sul corso del progetto, preparando il team a gestire queste variabili in corso d'opera.
+\paragraph{Assunzioni}
+
+\begin{enumerate}
+  \item Si assume una collaborazione attiva tra i membri del team e gli stakeholder per garantire una comprensione condivisa degli obiettivi.
+  
+  \item Si presuppone la disponibilità delle risorse umane e tecnologiche necessarie per lo sviluppo e l'implementazione del progetto.
+\end{enumerate}
+
+\paragraph{Rischi e Ostacoli}
+
+\begin{enumerate}
+  \item \textbf{Tecnologici:} Rischi legati a nuove tecnologie o tecnologie deprecate.
+  
+  \item \textbf{Ambienti:} Possibili cambiamenti di personale potrebbero influenzare il progetto.
+  
+  \item \textbf{Interpersonali:} Gestire le relazioni tra le persone all'interno del team.
+  
+  \item \textbf{Culturali:} Valutare l'ambito del progetto e la sua convenienza.
+  
+  \item \textbf{Relazioni Causali:} Assicurare che la soluzione proposta risolva effettivamente il problema identificato.
+\end{enumerate}
 
 \subsection{Project Management Life Cycle}
+
