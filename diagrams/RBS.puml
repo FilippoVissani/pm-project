@@ -1,48 +1,44 @@
 @startwbs
-* Requirement Breakdown Structure
-** Mainstay Nodes
-*** Receive information from Resource nodes modeling sensors
-*** Communicate information to Resource nodes modeling actuators
-*** Detect malfunctions in Resource nodes
-*** Detect malfunctions in other Mainstay nodes
-*** Save information by contacting the persistence service
-*** No need to know the types of Resource nodes in advance
-*** Distributed data structure for storing relevant information
-**** Synchronized structure between Mainstay nodes
-**** Maintain data consistency over time
-** Resource Nodes
-*** Represent abstractions of:
-**** Sensors
-**** Actuators
-**** More complex entities, like control stations, possibly utilizing graphical interfaces
-*** Reference a Mainstay node to obtain or communicate information
-*** Can be added or removed in real-time
-** Data Persistence Service
-*** Persistently save the state of Mainstay nodes
-*** Persistently save the state of Resource nodes
-** Fault Tolerance
-*** Malfunction of a node should not compromise the system's operation
-** Modularity
-*** Introduce new modules without modifying existing components
-** Specific Modules for Resource Nodes
-*** Acid Rain Detection Sensor
-*** Air Quality Analysis Sensor
-**** Measure PM10 concentration
-**** Measure PM2.5 concentration
-**** Measure NOx concentration
-**** Use a pre-built, low-energy, network protocol-enabled sensor
-*** Noise Pollution Detection Sensor
-**** Readings range from 40 to 100 decibels (dB)
-**** Provide a description corresponding to the noise level
-*** River Water Level Detection Module
-**** Flood detection sensor
-***** Periodically measure water level and communicate the value to the Mainstay node
-**** Control panel for intervention in case of flooding
-***** Configurable flood threshold
-***** Control multiple sensors
-***** Three states: Safe, Warned, Evacuating
-****** Show the current state of the River Monitor
-****** Automatically switch to Warned state when the majority of sensors exceed the flood threshold
-****** Intervene by switching to Evacuating state when the system is Warned
-****** Intervene by switching back to Safe state when the system is Evacuating
+
+<style>
+node {
+    Padding 12
+    Margin 3
+    HorizontalAlignment center
+    MaximumWidth 100
+}
+
+rootNode {
+    LineThickness 1.0
+}
+
+leafNode {
+    Padding 3
+}
+
+</style>
+
+*[#darkorange] CityTwin
+**[#deeppink] Mainstay Nodes
+***[#mediumpurple] Receive information from Resource nodes modeling sensors
+***[#mediumpurple] Communicate information to Resource nodes modeling actuators
+***[#mediumpurple] Detect malfunctions in Resource nodes
+***[#mediumpurple] Detect malfunctions in other Mainstay nodes
+***[#mediumpurple] Save information by contacting the persistence service
+***[#mediumpurple] No need to know the types of Resource nodes in advance
+**[#deeppink] Resource Nodes
+***[#mediumpurple] Reference a Mainstay node to obtain or communicate information
+***[#mediumpurple] Can be added or removed in real-time
+**[#deeppink] Data Persistence Service
+***[#mediumpurple] Persistently save the state of Mainstay nodes
+***[#mediumpurple] Persistently save the state of Resource nodes
+**[#deeppink] Fault Tolerance
+***[#mediumpurple] Malfunction of a node should not compromise the system's operation
+**[#deeppink] Modularity
+***[#mediumpurple] Introduce new modules without modifying existing components
+**[#deeppink] Specific Modules for Resource Nodes
+***[#mediumpurple] Acid Rain Detection Sensor
+***[#mediumpurple] Air Quality Analysis Sensor
+***[#mediumpurple] Noise Pollution Detection Sensor
+***[#mediumpurple] River Water Level Detection Module
 @endwbs
