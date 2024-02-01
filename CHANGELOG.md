@@ -1,3 +1,33 @@
+## [1.0.6](https://github.com/FilippoVissani/pm-project/compare/1.0.5...1.0.6) (2024-02-01)
+
+
+### Bug Fixes
+
+* fix figure caption ([e01498f](https://github.com/FilippoVissani/pm-project/commit/e01498f0f3282ee6dcf4d3316bb46c1c2e7e3820))
+* fix figures path ([0f168fa](https://github.com/FilippoVissani/pm-project/commit/0f168fab9043960a1cb1f84a8fc85f9726f7436c))
+* switch from Oslo to Roma ([5fca0d3](https://github.com/FilippoVissani/pm-project/commit/5fca0d38667187f18f8ba7322c9742be8f29a805))
+
+
+### Documentation
+
+* add Agendas ([f0870ae](https://github.com/FilippoVissani/pm-project/commit/f0870ae0a977bc81b1db2d7d7a49f8322a272f32))
+* add CoS ([0d83870](https://github.com/FilippoVissani/pm-project/commit/0d83870869a9a2c81b9f80b91e1eb047c8cd1a84))
+* add new sections ([668246c](https://github.com/FilippoVissani/pm-project/commit/668246c46e96cd7b045f9803fca06b37ace1da3a))
+* add participants ([f291dd0](https://github.com/FilippoVissani/pm-project/commit/f291dd02e7bd9e8a344d676149ac70a8ce6b5fff))
+* add PMLC ([31d98e6](https://github.com/FilippoVissani/pm-project/commit/31d98e6698c5b766fd47cbe22f2852b9c31a41d7))
+* add POS ([7e67f1b](https://github.com/FilippoVissani/pm-project/commit/7e67f1b6090b9330ef9c99e59d988ab2d178e1e9))
+* add RBS ([e9d697b](https://github.com/FilippoVissani/pm-project/commit/e9d697be42eef63dca66489404b72d4df46e25d5))
+* add RBS ([acda984](https://github.com/FilippoVissani/pm-project/commit/acda984940a1356c95ec07d85c6f5fc8423aeb72))
+* add RBS ([8e92cc5](https://github.com/FilippoVissani/pm-project/commit/8e92cc5cd2e7ce111ff4d0547500cc9f88bd0726))
+* add requirements ([e37053a](https://github.com/FilippoVissani/pm-project/commit/e37053a66e91faf469c62a062951d0279539571c))
+* add ubiquitous language ([1ac34ef](https://github.com/FilippoVissani/pm-project/commit/1ac34efe80f47e2157388568fc6f3b5c0159d7b3))
+* add User stories ([70e59af](https://github.com/FilippoVissani/pm-project/commit/70e59af7ea4ef97663d7ec42c7e0094f4d0e72f6))
+
+
+### General maintenance
+
+* add folder to .gitignore ([d8bfe3c](https://github.com/FilippoVissani/pm-project/commit/d8bfe3c05853612fe2efcf72cfbc5ba343cc32aa))
+
 ## [1.0.5](https://github.com/FilippoVissani/pm-project/compare/1.0.4...1.0.5) (2024-01-31)
 
 
