@@ -23,6 +23,64 @@ Il focus primario del primo incontro consiste nell'elaborare la Work Breakdown S
 
 \subsection{Deliverables}
 
+\subsubsection{Work Breakdown Structure}
+
+\begin{enumerate}
+    \item Nodi Mainstay
+          \begin{enumerate}
+              \item Ricevere informazioni dai nodi Resource che modellano sensori
+                    \begin{enumerate}
+                        \item Implementare un'interfaccia per ricevere informazioni dai nodi Resource
+                        \item Elaborare le informazioni ricevute
+                    \end{enumerate}
+              \item Comunicare informazioni ai nodi Resource che modellano attuatori
+                    \begin{enumerate}
+                        \item Implementare un'interfaccia per comunicare informazioni ai nodi Resource
+                    \end{enumerate}
+              \item Rilevare malfunzionamenti nei nodi Resource
+                    \begin{enumerate}
+                        \item Implementare un meccanismo per rilevare malfunzionamenti nei nodi Resource
+                    \end{enumerate}
+              \item Rilevare malfunzionamenti in altri nodi Mainstay
+                    \begin{enumerate}
+                        \item Implementare un meccanismo per rilevare malfunzionamenti nei nodi Mainstay
+                    \end{enumerate}
+              \item Salvare le informazioni contattando il servizio di persistenza
+                    \begin{enumerate}
+                        \item Implementare un'interfaccia per contattare il servizio di persistenza
+                    \end{enumerate}
+              \item Non deve essere necessario conoscere il tipo di nodo Resource
+                    \begin{enumerate}
+                        \item Definire un'interfaccia generica per ricevere e comunicare informazioni con i nodi Resource
+                    \end{enumerate}
+          \end{enumerate}
+    \item Nodi Resource
+          \begin{enumerate}
+              \item Fare riferimento a un nodo Mainstay per ricevere o comunicare informazioni
+              \item Possibilità di essere aggiunti o rimossi in tempo reale
+          \end{enumerate}
+    \item Servizio di persistenza
+          \begin{enumerate}
+              \item Salvare in modo persistente lo stato dei nodi Mainstay
+              \item Salvare in modo persistente lo stato dei nodi Resource
+          \end{enumerate}
+    \item Tolleranza ai guasti
+          \begin{enumerate}
+              \item Il malfunzionamento di un nodo non deve compromettere il funzionamento del sistema
+          \end{enumerate}
+    \item Modularità
+          \begin{enumerate}
+              \item Introdurre nuovi moduli senza dover modificare componenti esistenti
+          \end{enumerate}
+    \item Moduli specifici per nodi Resource
+          \begin{enumerate}
+              \item Acid Rain Detection Sensor
+              \item Air Quality Analysis Sensor
+              \item Noise Pollution Detection Sensor
+              \item River Water Level Detection Module
+          \end{enumerate}
+\end{enumerate}
+
 Il gruppo di sviluppo, basandosi sulla Struttura della WBS elaborata durante la riunione, ha proceduto a stimare la durata di ciascuna attività identificata. La valutazione dei tempi è stata effettuata attraverso l'applicazione della \textit{Delphi Tecnique}, in cui ogni partecipante ha espresso in modo anonimo la propria opinione sulla durata dell'attività in esame. Successivamente, tutte le valutazioni raccolte sono state presentate al team di sviluppo per favorire una discussione approfondita sulle diverse proposte. Questo processo è stato seguito da iterazioni aggiuntive, che si sono svolte con le stesse modalità descritte. La fase di stima si conclude quando si giunge a un consenso sulla durata o, più frequentemente, quando si raggiunge il numero massimo di iterazioni prestabilito. In quest'ultimo caso, la durata assegnata è la media pesata delle stime raccolte nell'ultima iterazione.
 
 \section{Seconda Joint Project Planning Session}
@@ -32,9 +90,9 @@ Il gruppo di sviluppo, basandosi sulla Struttura della WBS elaborata durante la 
 La seconda Joint Project Planning Session si concentra sulla stima delle risorse e delle durate necessarie per l'implementazione delle attività precedentemente identificate. Questa fase è fondamentale per garantire una pianificazione realistica e la corretta allocazione delle risorse disponibili. L'agenda della riunione include:
 
 \begin{itemize}
-\item Discussione sulla stima delle risorse necessarie per ciascuna attività.
-\item Valutazione delle dipendenze tra le risorse e le attività.
-\item Definizione di criteri chiave per l'allocazione delle risorse.
+    \item Discussione sulla stima delle risorse necessarie per ciascuna attività.
+    \item Valutazione delle dipendenze tra le risorse e le attività.
+    \item Definizione di criteri chiave per l'allocazione delle risorse.
 \end{itemize}
 
 \subsection{Deliverables}
