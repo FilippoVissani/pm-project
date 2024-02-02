@@ -282,130 +282,9 @@ Durante lo stesso incontro, il linguaggio comune è stato rivisto e aggiornato p
           \end{itemize}
 \end{enumerate}
 
-\subsection{Requisiti}
-
-Sono stati definiti nel dettaglio i requisiti del sistema CityTwin, fornendo una guida chiara per lo sviluppo del progetto. Questa fase è stata fondamentale per ottenere una comprensione approfondita delle funzionalità e delle caratteristiche del sistema.
-
-\subsubsection{Requisiti di Business}
-I requisiti aziendali definiscono gli obiettivi di alto livello e la motivazione dietro lo sviluppo del software. Rispondono alla domanda "perché?" e definiscono l'importanza strategica del progetto:
-\begin{enumerate}
-    \item Obiettivi Strategici: Il progetto "CityTwin" mira a creare una piattaforma di monitoraggio delle smart city per migliorare la gestione e l'ottimizzazione delle risorse urbane.
-    \item Aumento dell'Efficienza Urbana: Il sistema mira a migliorare l'efficienza operativa delle città intelligenti attraverso la rappresentazione digitale delle entità e delle interazioni all'interno della città.
-\end{enumerate}
-
-\subsubsection{Requisiti Utente}
-I requisiti utente si concentrano sull'esperienza dell'utente finale e sulla modalità di interazione con il sistema.
-Gli scenari d'uso hanno permesso di definire le azioni principali che gli utenti avrebbero potuto compiere all'interno dell'applicazione.
-Per rappresentare in modo efficace questi scenari e facilitare la comunicazione visiva di quello che il sistema offre all'utente, è stato definito un diagramma dei casi d'uso, mostrato in Figura \ref{fig:use-cases-diagram}. Questo diagramma ha contribuito a visualizzare in modo chiaro ed esauriente le attività degli utenti e le interazioni con il sistema.
-
-\begin{enumerate}
-    \item L'utente deve avere a disposizione una GUI (Control Panel) con le seguenti funzionalità:
-          \begin{enumerate}
-              \item Deve mostrare lo stato attuale dei nodi Mainstay e Resource del sistema.
-              \item Deve mostrare la posizione delle risorse nella città, indicandone il nome e lo stato (online/offline).
-              \item Deve mostrare un grafico che rappresenti il numero di nodi Mainstay e Resource online nel tempo, sulla base dei dati rilevati
-                    dal servizio di persistenza.
-          \end{enumerate}
-    \item L'utente deve avere a disposizione una GUI (River Monitor) con le seguenti funzionalità:
-          \begin{enumerate}
-              \item Deve mostrare lo stato attuale del River Monitor (Safe, Warned, Evacuating).
-              \item Deve mostrare i sensori monitorati con il relativo livello dell'acqua.
-              \item Deve mostrare il valore di soglia dell'acqua sopra la quale il River Monitor passa allo stato di "Warned".
-              \item Deve mettere a disposizione un pulsante per passare allo stato di "Evacuating" e un pulsante per tornare allo stato di "Safe".
-          \end{enumerate}
-    \item L'utente deve avere la possibilità di aggiungere o rimuovere nuovi nodi Resource in tempo reale, senza che questo comprometta il funzionamento del sistema. Questa flessibilità consente di adattare il sistema alle mutevoli esigenze delle smart city.
-\end{enumerate}
-\begin{figure}[H]
-    \centering
-    \caption{Diagramma dei casi d'uso.}
-    \includegraphics[width=0.8\textwidth]{figures/use-cases-diagram.png}
-    \label{fig:use-cases-diagram}
-\end{figure}
-
-
-\subsubsection{Requisiti Funzionali}
-I requisiti funzionali delineano le funzioni specifiche del sistema, cioè cosa il sistema deve fare:
-\begin{enumerate}
-    \item I nodi Mainstay sono la struttura portante dell'intero sistema:
-          \begin{enumerate}
-              \item Ricevono informazioni dai nodi Resource che modellano sensori.
-              \item Comunicano informazioni ai nodi Resource che modellano attuatori.
-              \item Rilevano i malfunzionamenti dei nodi Resource.
-              \item Rilevano i malfunzionamenti degli altri nodi Mainstay.
-              \item Si occupano di salvare le informazioni contattando il servizio di persistenza.
-              \item Non devono conoscere a prescindere le tipologie dei nodi Resource.
-              \item Devono disporre di una struttura dati distribuita che permetta di memorizzare le informazioni rilevanti:
-                    \begin{enumerate}
-                        \item La struttura dati deve essere sincronizzata tra i nodi Mainstay.
-                        \item La struttura dati deve mantenere la consistenza dei dati nel tempo.
-                    \end{enumerate}
-          \end{enumerate}
-    \item I nodi Resource:
-          \begin{enumerate}
-              \item Rappresentano astrazioni di:
-                    \begin{enumerate}
-                        \item Sensori.
-                        \item Attuatori.
-                        \item Entità più complesse, come stazioni di controllo, che possono anche impiegare interfacce grafiche.
-                    \end{enumerate}
-              \item Fanno riferimento ad uno dei nodi Mainstay per ottenere o comunicare informazioni.
-              \item Possono essere aggiunti o rimossi in tempo reale.
-          \end{enumerate}
-    \item Deve essere presente un servizio di persistenza dei dati che permetta di salvare in modo persistente:
-          \begin{enumerate}
-              \item Lo stato dei nodi Mainstay.
-              \item Lo stato dei nodi Resource.
-          \end{enumerate}
-    \item Il malfunzionamento di un nodo non deve compromettere il funzionamento del sistema.
-    \item Deve poter essere possibile introdurre nuovi moduli senza dover modificare i componenti esistenti.
-    \item Vengono previsti i seguenti moduli per i nodi Resource:
-          \begin{enumerate}
-              \item Sensore per la rilevazione di piogge acide. Il sensore deve essere in grado di rilevare il valore di pH dell'acqua piovana, compreso tra 0 e 14.
-              \item Sensore per l'analisi della qualità dell'aria. Il sensore deve essere in grado di rilevare i seguenti parametri chiave:
-                    \begin{enumerate}
-                        \item \label{itm:pm10} Concentrazione di PM10 (Particolato inferiore ai 10 micrometri).
-                        \item \label{itm:pm25} Concentrazione di PM2,5 (Particolato inferiore ai 2,5 micrometri. Si noti che è un sottoinsieme del PM10).
-                        \item \label{itm:NOx} Concentrazione di NOx (Ossidi di azoto).
-                    \end{enumerate}
-                    Si deve inoltre considerare che si andrà a utilizzare un sensore economico prefabbricato a basso consumo energetico, in grado di comunicare i dati rilevati tramite un protocollo di rete.
-              \item Sensore per la rilevazione dell'inquinamento acustico, con le seguenti caratteristiche:
-                    \begin{enumerate}
-                        \item \label{itm:dB} Le letture devono variare in un intervallo di valori rappresentativi di un ambiente urbano, da 40 a 100 decibel (dB).
-                        \item \label{itm:dBDescription} Oltre al valore in decibel, il sensore deve fornire una descrizione corrispondente al livello di rumore.
-                    \end{enumerate}
-              \item Modulo per la rilevazione del livello dell'acqua di un fiume e possibilità di intervento:
-                    \begin{enumerate}
-                        \item Sensore per la rilevazione degli allagamenti: il sensore deve periodicamente misurare il livello dell'acqua e comunicare il valore rilevato al nodo Mainstay.
-                        \item Pannello di controllo per l'intervento in caso di allagamento, con le seguenti caratteristiche:
-                              \begin{enumerate}
-                                  \item Soglia di allagamento configurabile.
-                                  \item Possibilità di controllare più sensori.
-                                  \item Possibilità di assumere tre stati:
-                                        \begin{itemize}
-                                            \item Safe quando non c'è pericolo.
-                                            \item Warned quando il livello dell'acqua supera la soglia di allagamento.
-                                            \item Evacuating quando il livello dell'acqua supera la soglia di allagamento e l'utente ha premuto il pulsante di evacuazione.
-                                        \end{itemize}
-                                  \item Mostrare lo stato attuale del River Monitor.
-                                  \item Passaggio in automatico allo stato Warned quando il valore della maggioranza dei sensori supera la soglia di allagamento.
-                                  \item Possibilità di intervenire passando in stato Evacuating quando il sistema è Warned.
-                                  \item Possibilità di intervenire tornando in stato Safe quando il sistema è Evacuating.
-                              \end{enumerate}
-                    \end{enumerate}
-          \end{enumerate}
-\end{enumerate}
-
-\subsubsection{Requisiti Non Funzionali}
-I requisiti non funzionali definiscono attributi di qualità, vincoli e proprietà generali del sistema:
-\begin{enumerate}
-    \item Affidabilità: L'affidabilità e la resilienza sono due aspetti cruciali del sistema "CityTwin". In caso di guasti hardware o malfunzionamenti dei nodi, il sistema deve essere in grado di mantenere la continuità delle operazioni fondamentali. A tale scopo, è prevista l'implementazione di un meccanismo di ridondanza, in cui i dati sono presenti in più istanze di nodi Mainstay.
-    \item Performance: Il sistema deve rispondere tempestivamente alle richieste dell'utente (in media entro 1 secondo) e gestire grandi quantità di dati in tempo reale (almeno 30 risorse).
-    \item Modularità: Il sistema deve essere realizzato in moduli separati, in modo da poter essere facilmente estendibile.
-\end{enumerate}
-
 \subsection{Requirement Breakdown Structure}
 
-Successivamente, il team ha proceduto con riportare i requisiti in un diagramma RBS (Requirement Breakdown Structure), in modo da ottenere una visione d'insieme delle funzionalità e delle caratteristiche del sistema. Questo diagramma è utile soprattutto per il committente del progetto, in quanto fornisce una rappresentazione visiva dei requisiti e delle relazioni tra di essi.
+Il team ha proceduto con il definire la RBS (Requirement Breakdown Structure), in modo da ottenere una visione d'insieme delle funzionalità e delle caratteristiche del sistema. Questo diagramma è utile anche per il committente del progetto, in quanto fornisce una rappresentazione visiva dei requisiti e delle relazioni tra di essi.
 
 \begin{figure}[H]
     \centering
@@ -427,11 +306,11 @@ L'obiettivo principale di CityTwin è fornire una piattaforma completa e flessib
 \subsubsection{Obiettivi del Progetto}
 
 \begin{enumerate}
-  \item \textbf{Creazione della Piattaforma:} Sviluppare una piattaforma di monitoraggio, integrando moduli specifici per la gestione avanzata di sensori e attuatori.
-  
-  \item \textbf{Implementazione di Nodi Mainstay e Resource:} Realizzare nodi Mainstay per la comunicazione efficace e nodi Resource per rappresentare entità urbane, garantendo una gestione dinamica in tempo reale.
-  
-  \item \textbf{Integrazione di Moduli:} Integrare nuovi moduli, come sensori per la qualità dell'aria e monitoraggio dello stato del fiume, senza compromettere la stabilità del sistema.
+    \item \textbf{Creazione della Piattaforma:} Sviluppare una piattaforma di monitoraggio, integrando moduli specifici per la gestione avanzata di sensori e attuatori.
+
+    \item \textbf{Implementazione di Nodi Mainstay e Resource:} Realizzare nodi Mainstay per la comunicazione efficace e nodi Resource per rappresentare entità urbane, garantendo una gestione dinamica in tempo reale.
+
+    \item \textbf{Integrazione di Moduli:} Integrare nuovi moduli, come sensori per la qualità dell'aria e monitoraggio dello stato del fiume, senza compromettere la stabilità del sistema.
 \end{enumerate}
 
 \subsubsection{Criteri di Successo}
@@ -439,11 +318,11 @@ L'obiettivo principale di CityTwin è fornire una piattaforma completa e flessib
 Il successo del progetto CityTwin sarà valutato in base ai seguenti criteri quantitativi:
 
 \begin{enumerate}
-  \item \textbf{Funzionalità Operative:} La piattaforma deve consentire la visualizzazione accurata dello stato della città digitale e il monitoraggio in tempo reale delle risorse.
-  
-  \item \textbf{Risposta Tempestiva:} Il tempo di risposta del sistema deve rispettare i limiti prestabiliti, garantendo un'esperienza utente efficiente.
-  
-  \item \textbf{Affidabilità e Ridondanza:} La ridondanza implementata deve mantenere la continuità operativa anche in caso di guasti hardware o malfunzionamenti.
+    \item \textbf{Funzionalità Operative:} La piattaforma deve consentire la visualizzazione accurata dello stato della città digitale e il monitoraggio in tempo reale delle risorse.
+
+    \item \textbf{Risposta Tempestiva:} Il tempo di risposta del sistema deve rispettare i limiti prestabiliti, garantendo un'esperienza utente efficiente.
+
+    \item \textbf{Affidabilità e Ridondanza:} La ridondanza implementata deve mantenere la continuità operativa anche in caso di guasti hardware o malfunzionamenti.
 \end{enumerate}
 
 \subsubsection{Assunzioni, Rischi e Ostacoli}
@@ -451,23 +330,23 @@ Il successo del progetto CityTwin sarà valutato in base ai seguenti criteri qua
 \paragraph{Assunzioni}
 
 \begin{enumerate}
-  \item Si assume una collaborazione attiva tra i membri del team e gli stakeholder per garantire una comprensione condivisa degli obiettivi.
-  
-  \item Si presuppone la disponibilità delle risorse umane e tecnologiche necessarie per lo sviluppo e l'implementazione del progetto.
+    \item Si assume una collaborazione attiva tra i membri del team e gli stakeholder per garantire una comprensione condivisa degli obiettivi.
+
+    \item Si presuppone la disponibilità delle risorse umane e tecnologiche necessarie per lo sviluppo e l'implementazione del progetto.
 \end{enumerate}
 
 \paragraph{Rischi e Ostacoli}
 
 \begin{enumerate}
-  \item \textbf{Tecnologici:} Rischi legati a nuove tecnologie o tecnologie deprecate.
-  
-  \item \textbf{Ambienti:} Possibili cambiamenti di personale potrebbero influenzare il progetto.
-  
-  \item \textbf{Interpersonali:} Gestire le relazioni tra le persone all'interno del team.
-  
-  \item \textbf{Culturali:} Valutare l'ambito del progetto e la sua convenienza.
-  
-  \item \textbf{Relazioni Causali:} Assicurare che la soluzione proposta risolva effettivamente il problema identificato.
+    \item \textbf{Tecnologici:} Rischi legati a nuove tecnologie o tecnologie deprecate.
+
+    \item \textbf{Ambienti:} Possibili cambiamenti di personale potrebbero influenzare il progetto.
+
+    \item \textbf{Interpersonali:} Gestire le relazioni tra le persone all'interno del team.
+
+    \item \textbf{Culturali:} Valutare l'ambito del progetto e la sua convenienza.
+
+    \item \textbf{Relazioni Causali:} Assicurare che la soluzione proposta risolva effettivamente il problema identificato.
 \end{enumerate}
 
 \subsection{Project Management Life Cycle}
@@ -478,13 +357,13 @@ La decisione di adottare una metodologia Agile all'interno del Project Managemen
 
 \begin{enumerate}
     \item \textbf{Adattabilità alle Variazioni dei Requisiti:} Nel contesto delle smart city, i requisiti possono evolvere rapidamente a causa dei cambiamenti nell'ambiente urbano o delle nuove esigenze degli utenti. L'Agile, con i suoi principi di risposta al cambiamento, consente al team di adattarsi in modo flessibile a nuovi requisiti senza dover riprogettare l'intero processo.
-    
+
     \item \textbf{Coinvolgimento Continuo degli Stakeholder:} La metodologia Agile promuove una comunicazione costante e una collaborazione attiva con gli stakeholder.
-    
+
     \item \textbf{Consegne Incrementali e Rapide:} La natura iterativa dello sviluppo Agile consente la realizzazione di funzionalità incrementali e il rilascio tempestivo di prodotti intermedi. Questo approccio è particolarmente vantaggioso per il progetto CityTwin, in cui è possibile fornire valore ai clienti attraverso funzionalità parziali già durante il processo di sviluppo.
-    
+
     \item \textbf{Gestione Efficace dei Rischi:} La metodologia Agile facilita l'identificazione e la gestione tempestiva dei rischi. Attraverso la pianificazione di sprint e la regolare revisione dei risultati ottenuti, il team può rapidamente adattarsi a eventuali sfide o cambiamenti nelle condizioni di progetto.
-    
+
     \item \textbf{Focus sulla Qualità e Test Continuo:} La pratica dell'Agile di integrare il controllo della qualità e i test durante tutto il ciclo di sviluppo favorisce la creazione di un prodotto finale più robusto e di alta qualità. Questo è particolarmente rilevante per il progetto CityTwin, dove la precisione e l'affidabilità delle informazioni sono essenziali per il corretto funzionamento del sistema.
 \end{enumerate}
 
@@ -492,14 +371,14 @@ La decisione di adottare una metodologia Agile all'interno del Project Managemen
 
 \begin{enumerate}
     \item \textbf{Sprint Planning Meetings:} Il lavoro è organizzato in sprint, ciascuno con una durata definita. Durante le riunioni di pianificazione degli sprint, il team identifica le attività prioritarie da completare durante il prossimo ciclo di sviluppo.
-    
+
     \item \textbf{Daily Stand-Ups:} Breve riunione quotidiana in cui i membri del team condividono aggiornamenti sul proprio lavoro, identificano ostacoli e pianificano le azioni correttive. Questa pratica promuove la trasparenza e la collaborazione continua.
-    
+
     \item \textbf{Backlog di Prodotto Dinamico:} Il backlog del prodotto, contenente tutte le funzionalità pianificate, è soggetto a cambiamenti durante il progetto. Nuovi requisiti o modifiche possono essere aggiunti in qualsiasi momento, garantendo una risposta rapida alle esigenze emergenti.
-    
+
     \item \textbf{Continuous Integration e Continuous Deployment (CI/CD):} L'uso di pratiche CI/CD consente al team di integrare costantemente il codice e di rilasciare nuove versioni del software in modo rapido e affidabile, garantendo un flusso di lavoro continuo.
-    
+
     \item \textbf{Retrospective Meetings:} Alla fine di ogni sprint, il team partecipa a riunioni retrospective per valutare ciò che è stato realizzato, identificare miglioramenti possibili nel processo e pianificare regolazioni per gli sprint successivi.
-    
+
     \item \textbf{Flessibilità nell'Implementazione dei Moduli:} L'Agile offre la flessibilità necessaria per introdurre nuovi moduli nel sistema senza dover attendere la conclusione del ciclo di sviluppo complessivo. Questo è particolarmente utile per il progetto CityTwin, dove l'evoluzione delle tecnologie o l'emergere di nuove esigenze richiede una risposta immediata.
 \end{enumerate}
