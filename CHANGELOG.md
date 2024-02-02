@@ -1,3 +1,39 @@
+## [1.0.7](https://github.com/FilippoVissani/pm-project/compare/1.0.6...1.0.7) (2024-02-02)
+
+
+### Bug Fixes
+
+* define correct style for enumerations ([fc51038](https://github.com/FilippoVissani/pm-project/commit/fc51038a9bd0f99b95602d2ccd90ccbcc387ad92))
+* fix table ([3d9d559](https://github.com/FilippoVissani/pm-project/commit/3d9d55965e06a4f9122757cbc65fec80578dc213))
+* move table in correct position ([cd9c0af](https://github.com/FilippoVissani/pm-project/commit/cd9c0af5a2c8c7ee71571457da7c034e0f729d2a))
+
+
+### Documentation
+
+* add "stima dei tempi" ([7b1ce2a](https://github.com/FilippoVissani/pm-project/commit/7b1ce2ac32e82b6bd9c42b4ca6a6641e91c079a6))
+* add first JPPS ([8491e03](https://github.com/FilippoVissani/pm-project/commit/8491e034f56d312e127c214069056a940a0ce9a2))
+* add GANTT ([f7f0293](https://github.com/FilippoVissani/pm-project/commit/f7f02934358246c6f2f52fe03c0f60a4b377a0de))
+* add GANTT diagram ([fc6797c](https://github.com/FilippoVissani/pm-project/commit/fc6797cb92ff424a229fe84beb307ef444c747df))
+* add second JPPS ([312b3b3](https://github.com/FilippoVissani/pm-project/commit/312b3b32c9644201775a6472a7701ca27c6c07bb))
+* add third JPPS ([716b2e6](https://github.com/FilippoVissani/pm-project/commit/716b2e6c7da087d9ebd5647265f7c0988f931a6b))
+* extend planning ([7175a4c](https://github.com/FilippoVissani/pm-project/commit/7175a4cb44ceff751e9dcb71e6003c41491f8619))
+* fix stima delle risorse table ([aa1bf27](https://github.com/FilippoVissani/pm-project/commit/aa1bf27f59e0b4f40051eec3573111a0fe1782b2))
+* **JPPS:** add risk analysis ([a800f20](https://github.com/FilippoVissani/pm-project/commit/a800f20cf42505fd46cfed428db8edb9925879d1))
+* **JPPS:** add stima delle risorse ([6af108e](https://github.com/FilippoVissani/pm-project/commit/6af108eb1e5b77c7a3e9183ceba986057bd76d7a))
+* **JPPS:** remove hline from stima delle risorse table ([c803f19](https://github.com/FilippoVissani/pm-project/commit/c803f1906aca4918d8c561c8ad568ce871f3240c))
+* remove use cases diagram ([2bf99bd](https://github.com/FilippoVissani/pm-project/commit/2bf99bd8e04bd1b222d4f409640aa04c8e95a1dd))
+* **SCOPING:** remove detailed requirements ([47d838c](https://github.com/FilippoVissani/pm-project/commit/47d838c2d473c12b75407d50c7536d419c5fd3ed))
+* **WBS:** add resource nodes wbs ([0c0768f](https://github.com/FilippoVissani/pm-project/commit/0c0768f8d1212a2d04b48d0bf723cc3c94950ebf))
+* **WBS:** remove a level ([c1abe47](https://github.com/FilippoVissani/pm-project/commit/c1abe4722528d1b42f4a080bcd32fd23a620d3f8))
+* **WBS:** start to define Work Breakdown Structure ([fc78672](https://github.com/FilippoVissani/pm-project/commit/fc786725ee9b7277382ede092ba4776aa9743558))
+* **WBS:** wbs done ([70c727f](https://github.com/FilippoVissani/pm-project/commit/70c727fcb71ac4c9a72b9d1728122aa5128bd7a0))
+
+
+### General maintenance
+
+* add empty line ([3c6f154](https://github.com/FilippoVissani/pm-project/commit/3c6f154100134f2f61543533c470a9cbbe02dd23))
+* add empty line ([3811fdd](https://github.com/FilippoVissani/pm-project/commit/3811fddb74a4e864856c491c9115ba185c9fdf20))
+
 ## [1.0.6](https://github.com/FilippoVissani/pm-project/compare/1.0.5...1.0.6) (2024-02-01)
 
 
