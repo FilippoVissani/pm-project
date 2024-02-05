@@ -1,11 +1,43 @@
 \chapter{Monitoring and Controlling}
 
+Il monitoraggio continuo opera ininterrottamente per l'intera durata del progetto, dalla sua fase iniziale fino al completamento. La valutazione iniziale dello stato di avanzamento del progetto si realizza principalmente attraverso l'organizzazione dei Daily Meeting, che sono stati precedentemente esaminati in dettaglio. In questi incontri giornalieri, ogni membro è incoraggiato a condividere gli aggiornamenti sul proprio lavoro, evidenziando sia gli aspetti positivi che quelli negativi, e, se necessario, richiedendo incontri specifici per risolvere problemi. Tale approccio consente al project manager di mantenere una visione costantemente aggiornata sullo stato del progetto. Pur non essendoci documenti formali generati in seguito a questi incontri, un riassunto delle attività settimanali emerge durante le Sprint Retrospective, garantendo così una documentazione regolare dell'evoluzione del progetto. Per facilitare il monitoraggio delle progressioni delineate nei meeting, il project manager ha scelto di utilizzare un sistema che incorpora funzioni di Reporting, Issue Logging e Quality Control. Questo sistema è il risultato dell'integrazione di varie soluzioni offerte dal Distributed Version Control System (DVCS) scelto, Git, e la piattaforma di hosting selezionata per il progetto, Github.
+
 \section{Sistema di Reporting}
 
-\section{Gestione dell'Issue Log}
+La gestione e il monitoraggio del progetto sono stati implementati attraverso un sistema centralizzato basato su piattaforma Github. La struttura di questo sistema si compone di diverse repository, ognuna dedicata a specifici aspetti del progetto, come il core e i vari moduli che rappresentano una o più risorse.
 
-\section{Project Status Meetings}
+Ciascuna repository è stata dotata di una bacheca Github Projects, uno strumento che facilita la pianificazione e il tracciamento delle attività. La bacheca è organizzata in quattro colonne che rappresentano lo stato di avanzamento delle attività:
 
-\section{Problem Escalation Strategy}
+\begin{itemize}
+\item \textbf{Product Backlog}: Questa colonna raccoglie tutti gli elementi derivati dalla Requirements Breakdown Structure (RBS), delineando le funzionalità o i miglioramenti che devono essere implementati nel progetto.
+\item \textbf{Todo}: Gli elementi assegnati a uno sviluppatore, ma la cui implementazione deve ancora iniziare, vengono collocati in questa colonna. È la fase di pianificazione in cui vengono definiti i compiti da svolgere successivamente.
 
-\section{Approvazione per la Chiusura del Progetto}
+\item \textbf{Work in Progress}: In questa colonna sono inclusi gli elementi assegnati e attualmente in fase di sviluppo. Fornisce una chiara visione di ciò su cui attualmente il team sta concentrando i propri sforzi.
+
+\item \textbf{Done}: Una volta completati e testati con successo, gli elementi vengono spostati in questa colonna. Rappresenta un punto di verifica e integrazione, indicando che l'implementazione è pronta per essere integrata nel ramo principale dello sviluppo.
+\end{itemize}
+
+Inoltre, è stata istituita una bacheca globale che abbraccia l'intero progetto. Questa bacheca fornisce una panoramica a livello di progetto, consentendo il monitoraggio delle milestone e offrendo una visione complessiva dello stato e della progressione del progetto nel suo complesso. Questo approccio fornisce un mezzo efficace per coordinare le attività, garantendo una gestione trasparente e efficiente del processo di sviluppo.
+
+\section{Quality Control}
+
+Per garantire una solida base di qualità e correttezza del software da consegnare, è stato implementato un sistema automatizzato di esecuzione dei test utilizzando il servizio Github Actions. Per ogni nuova feature che si intende implementare, è necessario definire una serie di test specifici. Attraverso l'utilizzo di Github Actions, questi test vengono eseguiti automaticamente ogni volta che viene effettuato un push su un branch della repository corrispondente, notificando agli sviluppatori l'esito dell'operazione.
+
+Questo approccio consente un controllo continuo della qualità del codice durante il processo di sviluppo. Inoltre, sfruttando il meccanismo delle Pull request e seguendo il modello Github Flow, è stata implementata una pratica di sicurezza che protegge il ramo principale della repository. Solo le richieste di merge di codice che superano con successo tutti i test specificati possono essere accettate, garantendo così un livello minimo di qualità prima dell'integrazione nel ramo principale.
+
+Questo strumento, sebbene non esaustivo, fornisce una solida base per un controllo automatizzato della qualità, contribuendo a garantire che ogni contributo al progetto soddisfi i requisiti definiti e rispetti gli standard di qualità prestabiliti. La combinazione di Github Actions, Pull requests e il Github Flow contribuisce a promuovere una gestione efficiente e affidabile del ciclo di sviluppo del software.
+
+\section{Issue Log}
+
+Per gestire e monitorare gli eventuali problemi che potrebbero emergere durante lo sviluppo del progetto, il nostro team si avvarrà del servizio di issues fornito da Github. Ogni sviluppatore nella specifica repository avrà la possibilità di aprire una nuova issue direttamente attraverso l'interfaccia web di Github. In questa issue, sarà in grado di fornire una descrizione dettagliata del problema riscontrato.
+
+Ogni issue può trovarsi in uno dei seguenti stati:
+
+\begin{itemize}
+    \item \textbf{Open}: In questo stato, l'issue è visibile nella scheda "Issues" sulla pagina Github della repository. Gli sviluppatori possono essere assegnati alla issue, e è possibile creare un branch specifico (fix branch) associato all'issue per lavorare alla risoluzione del problema.
+    \item \textbf{Closed}: Quando un problema è stato risolto e l'issue è chiusa, non è più immediatamente visibile nella scheda "Issues". Tuttavia, è possibile riaprire l'issue se necessario.
+\end{itemize}
+
+Ogni sviluppatore è responsabile di aprire una nuova issue ogni volta che si trova di fronte a un problema significativo o bloccante. Inoltre, si incoraggiano gli sviluppatori a discutere di eventuali issue durante i daily meeting per valutare la necessità di organizzare meeting specifici per risolvere i problemi in modo collaborativo.
+
+Questo approccio offre un canale dedicato per la gestione proattiva dei problemi, permettendo al team di rilevare e risolvere questi ultimi in maniera efficiente ed efficace e garantendo una comunicazione chiara e trasparente riguardo agli aspetti problematici del progetto.
