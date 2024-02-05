@@ -1,3 +1,24 @@
+## [1.0.9](https://github.com/FilippoVissani/pm-project/compare/1.0.8...1.0.9) (2024-02-05)
+
+
+### Bug Fixes
+
+* fix typo ([b73bfa6](https://github.com/FilippoVissani/pm-project/commit/b73bfa643205247f1f069542f14829083380e19c))
+* fix typo ([eab6a91](https://github.com/FilippoVissani/pm-project/commit/eab6a91f5499aa0104c7b0709a1f445937d2a53a))
+
+
+### Documentation
+
+* add development team ([4641a77](https://github.com/FilippoVissani/pm-project/commit/4641a7784e4d6889d211244bc841a95b2e99db21))
+* add section in chapter 4 ([ea25164](https://github.com/FilippoVissani/pm-project/commit/ea251641cacf0a6d4d76d3ecee9c5fd196589833))
+* edit Launching structure ([e571faa](https://github.com/FilippoVissani/pm-project/commit/e571faa3ff28638a1f1544933f40b4a306151042))
+* **launching:** add communication management ([b1001e7](https://github.com/FilippoVissani/pm-project/commit/b1001e72d14bdff1078c22d4e01fce05918db879))
+* **launching:** add kick-off meeting ([ea80bb3](https://github.com/FilippoVissani/pm-project/commit/ea80bb34ab2f79aaedb7145e1348345debe4e624))
+* **launching:** add launching intro ([aaf8bc0](https://github.com/FilippoVissani/pm-project/commit/aaf8bc0f4bf5958532984a7809949fc2a370ac6a))
+* **launching:** add operative rules for the team ([3230095](https://github.com/FilippoVissani/pm-project/commit/323009573791c9342ce37b1694c773dc2300bd4f))
+* **launching:** edit development team description ([309bcf7](https://github.com/FilippoVissani/pm-project/commit/309bcf7b9d03d30e502b00925cdefdc26e51ab2b))
+* **launching:** refactor operative rules for the team ([bf2db54](https://github.com/FilippoVissani/pm-project/commit/bf2db54a69bc03ed3676bba5fb6092ae61021863))
+
 ## [1.0.8](https://github.com/FilippoVissani/pm-project/compare/1.0.7...1.0.8) (2024-02-05)
 
 
