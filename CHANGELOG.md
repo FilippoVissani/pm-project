@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/FilippoVissani/pm-project/compare/1.0.7...1.0.8) (2024-02-05)
+
+
+### Documentation
+
+* add chapter 5 ([fd86699](https://github.com/FilippoVissani/pm-project/commit/fd8669925f0f233094ed8d8ea0dd3b5f8031246e))
+
 ## [1.0.7](https://github.com/FilippoVissani/pm-project/compare/1.0.6...1.0.7) (2024-02-02)
 
 
