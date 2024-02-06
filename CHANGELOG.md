@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/FilippoVissani/pm-project/compare/1.0.13...1.0.14) (2024-02-06)
+
+
+### Documentation
+
+* improve paragraph ([39ef4d8](https://github.com/FilippoVissani/pm-project/commit/39ef4d8a5fcdf92aa2c299daf2cfb137d561f146))
+
 ## [1.0.13](https://github.com/FilippoVissani/pm-project/compare/1.0.12...1.0.13) (2024-02-06)
 
 
