@@ -1,3 +1,10 @@
+## [1.0.17](https://github.com/FilippoVissani/pm-project/compare/1.0.16...1.0.17) (2024-02-06)
+
+
+### Documentation
+
+* improve "Assunzioni, Rischi e Ostacoli" ([d04f241](https://github.com/FilippoVissani/pm-project/commit/d04f241546133c81ac6c9947dcea98d85fe85cad))
+
 ## [1.0.16](https://github.com/FilippoVissani/pm-project/compare/1.0.15...1.0.16) (2024-02-06)
 
 
