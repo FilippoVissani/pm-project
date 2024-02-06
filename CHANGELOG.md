@@ -1,3 +1,13 @@
+## [1.0.10](https://github.com/FilippoVissani/pm-project/compare/1.0.9...1.0.10) (2024-02-06)
+
+
+### Documentation
+
+* **closing:** add Accettazione da Parte del Committente ([6c94b3f](https://github.com/FilippoVissani/pm-project/commit/6c94b3fea883a03e58199a2bab5b45a2a565ff86))
+* **closing:** add final report ([a2bd13d](https://github.com/FilippoVissani/pm-project/commit/a2bd13d6ac06a913691e4230fe4f75b8dc43ebae))
+* **closing:** add parts ([6f2d9db](https://github.com/FilippoVissani/pm-project/commit/6f2d9dbb89ad665ed81b46631ddc6bafabcfd322))
+* improve structure of chapter 6 ([65c8ccd](https://github.com/FilippoVissani/pm-project/commit/65c8ccd80386c4aaf63d30b218d196b985c8322f))
+
 ## [1.0.9](https://github.com/FilippoVissani/pm-project/compare/1.0.8...1.0.9) (2024-02-05)
 
 
