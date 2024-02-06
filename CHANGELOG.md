@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/FilippoVissani/pm-project/compare/1.0.11...1.0.12) (2024-02-06)
+
+
+### Bug Fixes
+
+* fix typos ([2a904ff](https://github.com/FilippoVissani/pm-project/commit/2a904ff739d53aa2a1a4cc3e5e2fcb6b92c459e2))
+
 ## [1.0.11](https://github.com/FilippoVissani/pm-project/compare/1.0.10...1.0.11) (2024-02-06)
 
 
