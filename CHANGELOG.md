@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/FilippoVissani/pm-project/compare/1.0.15...1.0.16) (2024-02-06)
+
+
+### Documentation
+
+* **planning:** add number of members ([0d20962](https://github.com/FilippoVissani/pm-project/commit/0d20962d3f9afe94c3cfb106f8ee9b3094959419))
+
 ## [1.0.15](https://github.com/FilippoVissani/pm-project/compare/1.0.14...1.0.15) (2024-02-06)
 
 
