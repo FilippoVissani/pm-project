@@ -1,3 +1,12 @@
+## [1.0.18](https://github.com/FilippoVissani/pm-project/compare/1.0.17...1.0.18) (2024-02-07)
+
+
+### Bug Fixes
+
+* fix tipo ([03fa21a](https://github.com/FilippoVissani/pm-project/commit/03fa21a3a2e9d058d24cb8a70da85b12fdd2ab81))
+* fix typo ([eb53181](https://github.com/FilippoVissani/pm-project/commit/eb53181c60cacc4cff850cc1b94f728100f6c5c5))
+* fix typo ([e199644](https://github.com/FilippoVissani/pm-project/commit/e199644eae72bba46c3f8c3dfa2342d5e7c2a02d))
+
 ## [1.0.17](https://github.com/FilippoVissani/pm-project/compare/1.0.16...1.0.17) (2024-02-06)
 
 
